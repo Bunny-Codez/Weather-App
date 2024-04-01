@@ -13,8 +13,18 @@
   </head>
   <body style="background-color: #111418">
     <div
-      class="container border --bs-border-opacity: 0 rounded-5 mt-4"
-      style="width: 500px; height: 600px; background-color: blueviolet"
+      class="container border-top rounded-5 mt-4"
+      style="
+        width: 500px;
+        height: 600px;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          0deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 121, 84, 1) 23%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      "
     >
       <!-- Search Bar -->
       <div
@@ -23,14 +33,15 @@
         <input
           id="searchbar"
           type="text"
-          placeholder="Enter your city"
+          placeholder="  Enter your city"
           class="rounded-pill"
+          style="background-color: #a1c1c4"
         />
-        <button class="rounded-circle">
+        <button class="rounded-circle" style="background-color: #a1c1c4">
           <img
             src="imgs/search.png"
             alt="search"
-            style="width: 19px; height: 20px"
+            style="width: 19px; height: 20px; background-color: #a1c1c4"
             class="rounded-circle"
           />
         </button>
@@ -46,24 +57,28 @@
               alt="weather"
               style="width: 160px; height: 160px"
             />
-            <h1 id="temp" style="text-align: center">22&deg;</h1>
-            <h2 id="city" style="text-align: center">Delhi</h2>
+            <h1 id="temp" style="text-align: center; color: white">22&deg;</h1>
+            <h2 id="city" style="text-align: center; color: white">Delhi</h2>
           </div>
         </div>
         <!-- additional info -->
         <div class="d-flex justify-content-between">
-          <div class="d-flex">
-            <img src="imgs/humidity.png" alt="" style="height: 78px" />
+          <div class="">
+            <img
+              src="imgs/humidity.png"
+              alt=""
+              style="height: 78px; width: 79px"
+            />
             <div class="d-flex flex-column">
-              <p>50%</p>
-              <p>Humidity</p>
+              <p style="color: white; text-align: center">50%</p>
+              <p style="color: white; text-align: center">Humidity</p>
             </div>
           </div>
-          <div class="d-flex">
+          <div>
             <img src="imgs/wind.png" alt="" />
             <div>
-              <p>15km/h</p>
-              <p>wind</p>
+              <p style="color: white; text-align: center">15km/h</p>
+              <p style="color: white; text-align: center">wind</p>
             </div>
           </div>
         </div>
