@@ -11,43 +11,61 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
-    <!-- Search Bar -->
+  <body style="background-color: #111418">
     <div
-      class="container d-flex flex-row gap-3 justify-content-center align-items-center vh-30 mt-5"
+      class="container border --bs-border-opacity: 0 rounded-5 mt-4"
+      style="width: 500px; height: 600px; background-color: blueviolet"
     >
-      <input type="text" placeholder="enter your city" />
-      <button>
-        <img
-          src="imgs/search.png"
-          alt="search"
-          style="width: 19px; height: 20px"
-        />
-      </button>
-    </div>
-    <!-- Main -->
-    <div class="container">
+      <!-- Search Bar -->
       <div
-        class="d-flex flex-column justify-content-center align-items-center pt-5 gap-5"
+        class="container d-flex flex-row gap-3 justify-content-center align-items-center vh-30 mt-5"
       >
-        <div class="d-flex flex-column">
+        <input
+          id="searchbar"
+          type="text"
+          placeholder="Enter your city"
+          class="rounded-pill"
+        />
+        <button class="rounded-circle">
           <img
-            src="imgs/clear.png"
-            alt="weather"
-            style="width: 160px; height: 160px"
+            src="imgs/search.png"
+            alt="search"
+            style="width: 19px; height: 20px"
+            class="rounded-circle"
           />
-          <h1 id="temp" style="text-align: center">22&deg;</h1>
-          <h2 id="city" style="text-align: center">Delhi</h2>
-        </div>
+        </button>
       </div>
-      <div class="d-flex justify-content-between">
-        <div class="d-flex flex-column">
-          <p>imgH</p>
-          <p>humidity</p>
+      <!-- Main -->
+      <div class="container">
+        <div
+          class="d-flex flex-column justify-content-center align-items-center pt-5 gap-5"
+        >
+          <div class="d-flex flex-column">
+            <img
+              src="imgs/clear.png"
+              alt="weather"
+              style="width: 160px; height: 160px"
+            />
+            <h1 id="temp" style="text-align: center">22&deg;</h1>
+            <h2 id="city" style="text-align: center">Delhi</h2>
+          </div>
         </div>
-        <div>
-          <p>imgW</p>
-          <p>wind</p>
+        <!-- additional info -->
+        <div class="d-flex justify-content-between">
+          <div class="d-flex">
+            <img src="imgs/humidity.png" alt="" style="height: 78px" />
+            <div class="d-flex flex-column">
+              <p>50%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <img src="imgs/wind.png" alt="" />
+            <div>
+              <p>15km/h</p>
+              <p>wind</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
