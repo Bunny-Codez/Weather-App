@@ -1,3 +1,6 @@
+const searchBox = document.querySelector("searchbar");
+const searchButton = document.querySelector("searchbutton");
+
 const fetchData = async () => {
   try {
     const responce = await fetch(
