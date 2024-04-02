@@ -9,6 +9,11 @@ const fetchData = async () => {
     console.log(err);
   }
   console.log(data);
+
+  document.querySelector("#temp").innerHTML = Math.round(data.main.temp) + "°c";
+  document.querySelector("#city").innerHTML = data.name;
+  document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
+  document.querySelector("#wind").innerHTML = data.wind.speed + "km/h";
 };
 
 fetchData();
