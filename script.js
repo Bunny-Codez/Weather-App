@@ -1,6 +1,8 @@
 const searchBox = document.querySelector("#searchbar");
 const searchButton = document.querySelector("#searchbutton");
 
+const weatherIcon = document.querySelector("#weather");
+
 const fetchData = async () => {
   try {
     const responce = await fetch(
@@ -32,8 +34,22 @@ const getCityWeather = async (city) => {
   document.querySelector("#city").innerHTML = data.name;
   document.querySelector("#humidity").innerHTML = data.main.humidity + "%";
   document.querySelector("#wind").innerHTML = data.wind.speed + "km/h";
+
+  if (data.weather[0].main == "Clear") {
+    weatherIcon.src = "imgs/clear.png";
+  } else if (data.weather[0].main == "Clouds") {
+    weatherIcon.src = "imgs/clouds.png";
+  } else if (data.weather[0].main == "Drizzle") {
+    weatherIcon.src = "imgs/drizzle.png";
+  } else if (data.weather[0].main == "Mist") {
+    weatherIcon.src = "imgs/mist.png";
+  } else if (data.weather[0].main == "Rain") {
+    weatherIcon.src = "imgs/rain.png";
+  } else if (data.weather[0].main == "Snow") {
+    weatherIcon.src = "imgs/snow.png";
+  }
 };
 
-searchButton.addEventListener("click", () => getCityWeather(searchBox.value))
+searchButton.addEventListener("click", () => getCityWeather(searchBox.value));
 
-// fetchData();
+fetchData();
