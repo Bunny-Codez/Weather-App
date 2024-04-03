@@ -31,6 +31,8 @@ const fetchData = async () => {
   } else if (data.weather[0].main == "Snow") {
     weatherIcon.src = "imgs/snow.png";
   }
+
+  document.querySelector("#main").style.display = "none";
 };
 
 const getCityWeather = async (city) => {
@@ -64,6 +66,8 @@ const getCityWeather = async (city) => {
   } else if (data.weather[0].main == "Haze") {
     weatherIcon.src = "imgs/haze.png";
   }
+
+  document.querySelector("#main").style.display = "block";
 };
 
 searchButton.addEventListener("click", () => getCityWeather(searchBox.value));
